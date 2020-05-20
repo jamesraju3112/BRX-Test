@@ -1,0 +1,56 @@
+<template>
+    
+    <lightning-card title="Contact List" icon-name="standard:contact">
+    
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                <lightning-input label= "Find Contact" value={searchKey} onchange={handleChange}>
+                </lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout vertical-align="center">
+
+            <template if:true={contacts}>
+                <template for:each={contacts} for:item="contact">
+                    <p key={contact.Id}></p>
+                </template>
+            </template>
+            <!--
+            <template for:each={contacts} for:item="contact" > 
+                <lightning-layout-item key={contact.key} item padding= "around-small" >
+                    <p>{contact.Name}</p>
+                    <p><lightning-formatted-email value={contact.Email} > </lightning-formatted-email> </p>
+                    <p><lightning-formatted-phone value={contact.Phone} > </lightning-formatted-phone> </p>
+                </lightning-layout-item>        
+            </template>
+            -->
+        </lightning-layout>
+    </lightning-card>
+    
+    <lightning-card title="Account List" icon-name="standard:account">
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                <lightning-input label= "Find Account" value={searchKey} onchange={handleChange}>
+                </lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout vertical-align="center">   
+            <lightning-layout-item padding="around-small">
+                <lightning-button label="Find Account" variant = "brand" onclick ={findAccounts}>
+                </lightning-button>
+            </lightning-layout-item>
+            <!--
+            <lightning-layout vertical-align="center">
+                <template for:each={accounts} for:item="account" > 
+                    <lightning-layout-item key={account.id} item padding= "around-small" >
+                        <p>{account.Name}</p>
+                        <p><lightning-formatted-text value={account.name} > </lightning-formatted-text> </p>
+                        <p><lightning-formatted-text value={account.industry}> </lightning-formatted-text> </p>
+                    </lightning-layout-item>        
+                </template>
+            </lightning-layout>
+            -->
+
+        </lightning-layout>
+</lightning-card>
+</template>

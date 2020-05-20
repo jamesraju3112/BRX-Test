@@ -1,0 +1,86 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/logicalLwcDemo": [
+                "logicalLwcDemo/logicalLwcDemo.js"
+            ],
+            "c/myFirstLWC": [
+                "myFirstLWC/myFirstLWC.js"
+            ],
+            "c/contactListDemo": [
+                "contactListDemo/contactListDemo.js"
+            ],
+            "c/apexWireMethodToProperty": [
+                "apexWireMethodToProperty/apexWireMethodToProperty.js"
+            ],
+            "c/apexWireMethodWithParams": [
+                "apexWireMethodWithParams/apexWireMethodWithParams.js"
+            ],
+            "c/brixmorLightningSearch": [
+                "brixmorLightningSearch/brixmorLightningSearch.js"
+            ],
+            "c/simpleEvent": [
+                "simpleEvent/simpleEvent.js"
+            ],
+            "c/paginator": [
+                "paginator/paginator.js"
+            ],
+            "c/designLwcDemo": [
+                "designLwcDemo/designLwcDemo.js"
+            ],
+            "c/lifeCycleHooks": [
+                "lifeCycleHooks/lifeCycleHooks.js"
+            ],
+            "c/pageReference": [
+                "pageReference/pageReference.js"
+            ],
+            "c/navigationToPagesExample": [
+                "navigationToPagesExample/navigationToPagesExample.js"
+            ],
+            "c/showToast": [
+                "showToast/showToast.js"
+            ],
+            "c/miscShareJavaScript": [
+                "miscShareJavaScript/miscShareJavaScript.js"
+            ],
+            "c/mortgageCalculator": [
+                "mortgageCalculator/mortgageCalculator.js"
+            ],
+            "c/mortgageUtils": [
+                "mortgageUtils/mortgageUtils.js"
+            ],
+            "c/mortgageAmortization": [
+                "mortgageAmortization/mortgageAmortization.js"
+            ],
+            "c/lWC_Map": [
+                "lWC_Map/lWC_Map.js"
+            ],
+            "c/picklistDemo": [
+                "picklistDemo/picklistDemo.js"
+            ],
+            "c/customDatatableInLWC": [
+                "customDatatableInLWC/customDatatableInLWC.js"
+            ],
+            "c/ltngRecordForm": [
+                "ltngRecordForm/ltngRecordForm.js"
+            ],
+            "c/loadContact": [
+                "loadContact/loadContact.js"
+            ],
+            "c/genericCreateRecord": [
+                "genericCreateRecord/genericCreateRecord.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

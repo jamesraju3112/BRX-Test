@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="Account Information" icon-name="standard:account">
+        <div class="slds-p-around-small">
+            <lightning-record-form 
+            object-api-name={objectApiName}
+            columns="2"
+            mode="edit"
+            fields= {fields}
+            layout-type="Full"
+            onsuccess={handleSuccess}
+            >
+
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+    <!--
+    <lightning-card title="Account Information" icon-name="standard:account">
+        <div class="slds-p-around-small">
+            <lightning-record-form 
+            record-id={recordId}
+            object-api-name={objectApiName}
+            columns="2"
+            mode="edit"
+            fields= {fields}
+            onsuccess={handleSuccess}
+            >
+
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+    -->
+    <!--
+    <lightning-record-view-form
+        record-id={recordId}
+        object-api-name ={objectApiName} >    
+        <lightning-output-field field-name="Name"></lightning-output-field>
+        <lightning-output-field field-name="Industry"></lightning-output-field>
+
+    </lightning-record-view-form>
+    -->
+    <lightning-record-edit-form    record-id={recordId} object-api-name={objectApiName} >
+        <lightning-input-field field-name="Name"></lightning-input-field>
+        <lightning-input-field field-name="Industry"></lightning-input-field>
+        <lightning-input-field field-name="AccountSource"></lightning-input-field>
+        <lightning-input-field field-name="Classification__c"></lightning-input-field>
+        <lightning-button type ="submit" variant="brand" label= "Edit Account"></lightning-button>
+    </lightning-record-edit-form>
+</template>

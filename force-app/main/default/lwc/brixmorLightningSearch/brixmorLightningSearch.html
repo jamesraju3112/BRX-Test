@@ -1,0 +1,49 @@
+<template>
+    <lightning-card title="Search in Accounts, Contacts, Leads and Deals" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search" value={searchKey}></lightning-input>
+            <lightning-card title="Contact List" icon-name="standard:contact">
+                <!-- <lightning-layout vertical-align="center"> -->
+                    <template if:true={contacts.data}>
+                        <template for:each={contacts.data} for:item="contact">
+                            <!-- <div key={contact.Id} class="slds-m-bottom_medium"> -->
+                            <p key={contact.Id}>
+                            <lightning-formatted-text value={contact.Name} > </lightning-formatted-text>  &nbsp;&nbsp;
+                            <!-- <lightning-formatted-text value={contact.account.name} > </lightning-formatted-text>  &nbsp;&nbsp; -->
+                            <lightning-formatted-text value={contact.title} > </lightning-formatted-text> &nbsp;&nbsp;
+                            <lightning-formatted-email value={contact.Email} > </lightning-formatted-email> &nbsp;&nbsp;
+                            <lightning-formatted-phone value={contact.Phone} > </lightning-formatted-phone>
+                            </p>
+                        <!-- </div> -->
+                        </template>
+                    </template>
+                    <template if:true={contacts.error}>
+                        {contacts.error}>
+                    </template>
+                <!-- </lightning-layout> -->
+            </lightning-card>
+            <lightning-card title="account List" icon-name="standard:account">
+                <!-- <lightning-layout vertical-align="center"> -->
+                <template if:true={accounts.data}>
+                    <template for:each={accounts.data} for:item="account">
+                        <p key={account.Id}>
+                        <lightning-formatted-url value={account.id} > </lightning-formatted-url>  &nbsp;&nbsp;
+                        <lightning-formatted-text value={account.Name} > </lightning-formatted-text>  &nbsp;&nbsp;
+                        <lightning-formatted-text value={account.phone} > </lightning-formatted-text>  &nbsp;&nbsp;
+                        <lightning-formatted-text value={account.Classification__c} > </lightning-formatted-text>  &nbsp;&nbsp;
+                        <lightning-formatted-text value={account.New_NAICS_Description__c} > </lightning-formatted-text>  &nbsp;&nbsp;
+                        <lightning-formatted-text value={account.billingcity} > </lightning-formatted-text>  &nbsp;&nbsp;
+                        <lightning-formatted-text value={account.billingstate} > </lightning-formatted-text>  &nbsp;&nbsp;
+                        <lightning-formatted-text value={account.billingpostalcode} > </lightning-formatted-text>  &nbsp;&nbsp;
+                        <lightning-formatted-text value={account.industry} > </lightning-formatted-text> &nbsp;&nbsp;
+                        </p>
+                    </template>
+                </template>
+                <template if:true={accounts.error}>
+                    {accounts.error}>
+                </template>
+            <!-- </lightning-layout> -->
+        </lightning-card>
+        </div>
+    </lightning-card>
+</template>
