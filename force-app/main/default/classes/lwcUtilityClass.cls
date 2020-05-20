@@ -2,6 +2,7 @@ public with sharing class lwcUtilityClass {
     public lwcUtilityClass() {
 
     }
+    //test
     @AuraEnabled(cacheable=true)
     public static Map<String,Integer> mapDemo(){
         Map<String,Integer> testMap = new Map<String,Integer>();
