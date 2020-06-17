@@ -71,6 +71,9 @@
             ],
             "c/genericCreateRecord": [
                 "genericCreateRecord/genericCreateRecord.js"
+            ],
+            "c/dynamicRecordCreationRows": [
+                "dynamicRecordCreationRows/dynamicRecordCreationRows.js"
             ]
         }
     },
